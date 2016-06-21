@@ -1,14 +1,31 @@
 Program Exercicio1 ;
 Var
-	 soma,subt,multiplicacao:integer;
-	 divisao:real;
+	 a,b,soma,subt,mult:integer;
+	 divi:real;
+	 operacao:char;
 Begin
    write('Digite dois números:');
    readln(a,b);
-	 soma:=a+b;
-	 subt:=a-b;
-	 divisao:=a/b;
-	 multiplicacao:=a*b;
-	 writeln(soma, subt, divisao:0:2,multiplicacao);
+   Write('Digite a operação que gostaria de fazer:');
+   readln(operacao);
+	  case operacao of
+	  '+' :begin
+	  			 soma:=a+b;
+	  			 write(soma);
+	  			end;
+	  '-' :begin
+						subt:=a-b;
+						write(subt);
+					end;
+		'*' :begin
+						mult:=a*b;
+						write(mult);
+					end;
+		'/' :begin
+						divi:=a/b;
+						write(divi);
+					end;
+						else write('operador inválido');
+						end;												
 	 readln;
 End.
